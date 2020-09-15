@@ -9,6 +9,7 @@ resource "vault_generic_secret" "x_example" {
 }
 EOT
 }
+
 resource "vault_generic_secret" "a_example" {
   path = "avengers/secrets/foo"
 
@@ -20,6 +21,7 @@ resource "vault_generic_secret" "a_example" {
 }
 EOT
 }
+
 resource "vault_generic_secret" "s_example" {
   path = "shared/secrets/foo"
 
