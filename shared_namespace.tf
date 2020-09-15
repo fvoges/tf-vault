@@ -5,6 +5,9 @@ module "shared_namespace" {
   vault_addr     = var.vault_addr
   kv_path        = var.kv_path
   use_kv         = true
+  policies = {
+    "shared_policy" = data.template_file.shared_policy.rendered
+  }
 }
 
 /* no namespace policies -- as this is a shared namespace all policies
